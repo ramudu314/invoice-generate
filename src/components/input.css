@@ -21,13 +21,6 @@ h2 {
   color: #4CAF50;
 }
 
-.form-groups {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-bottom: 15px;
-}
-
 .form-group {
   display: flex;
   gap: 20px;
