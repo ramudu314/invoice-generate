@@ -1,43 +1,38 @@
-# Aurika Tech Full stack developer Assignment
+# Invoice Generator
+This project is an invoice generator built with React that allows users to generate invoices in PDF or image format based on input data.
 
-# Objective:
-Develop a programmatic way of generating an invoice for orders placed on an e-commerce platform. The
-invoice format and structure should match the invoice in this image (to the extent possible).
+# Features
+Multi-format Downloads: Download invoices in PDF or image formats.
+Internationalization: Supports multiple languages (English and Spanish).
+Customizable Styling: Easily customizable invoice styling using CSS.
+# Technologies Used
+React: Frontend JavaScript library for building user interfaces.
+html2canvas: Library to capture screenshots of HTML elements.
+jsPDF: JavaScript library to generate PDFs.
+react-i18next: Internationalization library for React apps.
+# Installation
+To run the project locally, follow these steps:
 
-# Requirements:
-● There needs to be a placeholder for the company logo.
-● Assume that the below can be taken as input parameters:
-○ Seller Details: Name, Address, (City, State, Pincode), PAN No., GST Registration No.
-○ Place of Supply
-○ Billing Details: Name, Address, (City, State, Pincode), State/UT Code
-○ Shipping Details: Name, Address, (City, State, Pincode), State/UT Code
-○ Place of Delivery
-○ Order Details: Order No., Order Date
-○ Invoice Details: Invoice No., Invoice Details, Invoice Date
-○ Reverse Charge: Yes/No
-○ Item Details - List of items in the order with each item in the below format (see table in
-the invoice):
-■ Description
-■ Unit Price
-■ Quantity
-■ Discount
-■ Net Amount (to be derived as Unit Price * Quantity - Discount)
-■ Tax Rate: (18% in the example below)
+```bash
+npm install
+npm start
+```
 
-○ Signature image
-● You will need to compute/derive the below parameters:
-○ Item Details:
-■ Net Amount: Unit Price * Quantity - Discount
-■ Tax Type: If Place of Supply = Place of Delivery, then Tax Type should be broken
-down as CGST & SGST at 9% each (18% / 2). Else Tax Type should be a single
-component as IGST at 18%.
-■ Tax Amount: Net Amount * Tax Rate (2 separate components in case of
-CGST/SGST; a single component in case of IGST).
-■ Total Amount: Net Amount + Tax Amount
-○ Total row
-○ Amount in words
-● The signature image needs to be inserted as shown in the invoice image:
-○ For <Seller Name>:
-<Insert Signature>
-Authorised Signatory
+----Open http://localhost:3000 to view it in the browser.
 
+# Usage
+Fill in the invoice details such as seller information, buyer information, order details, and line items.
+Select the desired format (PDF or image) for downloading the invoice.
+Click the "Download" button to generate and download the invoice in the selected format.
+
+# Customization
+To customize the invoice styling or add new features:
+
+Modify the CSS in invoice.css to change the invoice layout and design.
+Extend the functionality by adding new components or integrating additional libraries as needed.
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+# Acknowledgments
+This project was inspired by the need for a simple yet effective invoice generation tool.
+Special thanks to the authors and contributors of the libraries used in this project.
