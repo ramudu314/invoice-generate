@@ -58,7 +58,6 @@ const Invoice = ({ invoiceData }) => {
   const [format, setFormat] = useState('pdf');
 
   const handleDownload = async () => {
-
     const invoiceElement = document.getElementById('invoice');
 
     if (format === 'pdf') {
@@ -208,7 +207,6 @@ const Invoice = ({ invoiceData }) => {
             <option value="image">Image</option>
           </select>
         </label>
-
       </div>
 
       <button onClick={handleDownload} className="download-button">Download</button>
